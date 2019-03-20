@@ -1,0 +1,63 @@
+.my-progress-component-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  margin-bottom: 100px;
+  div{
+    width: 80%;
+  }
+  .progress-title{
+
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 0;
+    margin: 10px 0;
+
+  }
+  .my-progress-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+
+
+    .left-container {
+      width: 48%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      .left-data-container{
+        width: 50%;
+      }
+      .left-data-container2{
+        width: 50%;
+      }
+
+
+    }
+
+    .right-container {
+      width: 48%;
+    }
+
+  }
+
+  .description-container{
+    margin-top: 20px;
+  }
+
+  .schedule-container{
+    margin-top: 30px;
+
+    .semester-schedule-title{
+      font-size: 22px;
+      font-weight: 700;
+      padding: 10px 0
+    }
+
+  }
+}

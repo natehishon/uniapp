@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
     else
       render 'edit'
     end
-  end
+  end 
 
   private
 

@@ -1,3 +1,4 @@
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -13,10 +14,12 @@
 //= require rails-ujs
 //= require jquery
 //= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 //= require materialize
-
-
+//= require('bulma-extensions/accordions/dist/js/bulma-accordion.min.js');
 
 $(document).on('turbolinks:load', function() {
 
@@ -27,4 +30,19 @@ $(document).on('turbolinks:load', function() {
 
 
     $('#fade-out-target').fadeOut(4000)
+    console.log("1")
+
+    $('#tab_header ul li.item').on('click', function() {
+        var number = $(this).data('option');
+        $('#tab_header ul li.item').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('#tab_container .container_item').removeClass('is-active');
+        $('div[data-item="' + number + '"]').addClass('is-active');
+    });
+
+
+
+
+
+
 });

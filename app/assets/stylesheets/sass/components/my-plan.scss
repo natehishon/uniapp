@@ -1,0 +1,39 @@
+.my-plan-container{
+
+  .course-width{
+    width: 50%;
+  }
+
+  .require-title{
+    font-size: 18px;
+    font-weight:700;
+    border: 1px solid #D3D3D3;
+    padding:10px;
+    background-color: #F5F5F5;
+  }
+
+
+  .plan-class-title{
+    font-size: 18px;
+    font-weight:700;
+    border: 1px solid #D3D3D3;
+    padding:10px;
+    background-color: #DCDCDC;
+  }
+
+  .plan-complete{
+    background-color: #e2fee2;
+    padding:10px;
+  }
+
+  .plan-in-prog{
+    padding:10px;
+    background-color: #ffd6b8;
+  }
+
+  .green-text{
+    color:#32CD32;
+    font-weight:500;
+  }
+
+}

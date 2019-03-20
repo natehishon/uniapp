@@ -1,9 +1,16 @@
-@import "materialize";
+@import "sass/planning";
+@import "sass/components/my-progress";
+@import "sass/components/my-catalog";
+@import "sass/components/my-plan";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -43,11 +50,49 @@ main {
 }
 
 nav {
-  background-color: #1976d2;
+  background-color: transparent!important;
+
+
+  .navbar-end{
+    margin-right: 10px;
+  }
+  img{
+
+  }
+
+}
+.mu-logo-container{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  .mu-nav-logo{
+    align-self: flex-start;
+    max-height: 70px;
+    padding: 5px;
+    margin: 10px;
+  }
+}
+
+.edit-profile{
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+.edit-profile:hover{
+  background-color: transparent;
 }
 
 .page-footer {
   background-color: #1976d2;
+  color: white;
+  padding: 30px;
+  margin-top: 40px;
 }
 .sign-up-form{
   padding-top:30px;

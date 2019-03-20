@@ -1,0 +1,22 @@
+#tab_header{
+  margin-top: 40px;
+}
+
+#tab_container{
+  padding:0;
+}
+
+#tab_container .container_item {
+  display: none;
+}
+
+#tab_container .container_item.is-active {
+  display: block;
+}
+
+.box{
+  box-shadow: none !important;
+}
+.my-progress{
+  padding-top: 10px!important;
+}

@@ -26,10 +26,17 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'rb-readline'
 gem 'pg'
+gem 'webpacker', '~> 4.x'
+gem 'react-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+
 
 gem "bulma-rails", "~> 0.7.3"
+gem 'bulma-extensions-rails'
+gem 'npm-pipeline-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

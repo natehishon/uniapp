@@ -2,16 +2,25 @@ class LoginsController < ApplicationController
   skip_before_action :require_user, only: [:new, :create]
 
   def new
+    if logged_in?
+      redirect_to root_path
+    end
 
   end
 
+
+
+
+
+
   def create
+
 
     student = Student.find_by(email: params[:logins][:email].downcase)
     if student && student.authenticate(params[:logins][:password])
       session[:student_id] = student.id
       flash[:notice] = "You have successfully logged in"
-      redirect_to student
+      redirect_to root_path
     else
       flash[:notice] = "Something was wrong with your login information"
       render 'new'
@@ -26,7 +35,7 @@ class LoginsController < ApplicationController
 
     session[:student_id] = nil
     flash[:notice] = "You have successfully logged out"
-    redirect_to root_path
+    redirect_to login_path
     
   end
 

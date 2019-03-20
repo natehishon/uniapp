@@ -1,55 +1,110 @@
-<header>
-  <ul id="dropdown1" class="dropdown-content">
-    <li><%= session_link %></li>
-    <% if logged_in? %>
-      <li><%= link_to "Profile", student_path(current_user) %></li>
-    <% end %>
-    <li class="divider"></li>
+<% if logged_in? %>
+  <header>
+    <div class="mu-logo-container">
+      <%= link_to image_tag("monsters-university-logo.png", :class => "mu-nav-logo"), root_path%>
 
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li><%= session_link %></li>
-    <% if logged_in? %>
-      <li><%= link_to "Profile", student_path(current_user) %></li>
-    <% end %>
-    <li class="divider"></li>
-
-  </ul>
-  <nav>
-    <div class="container">
-      <div class="nav-wrapper">
-        <%= link_to 'Monsters University', root_path, class:"brand-logo right" %>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><%= link_to 'Courses', root_path %></li>
-          <% if logged_in? %>
-            <li><%= link_to 'Students', students_path %></li>
-          <% end %>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul class="sidenav" id="mobile-demo">
-          <li><%= link_to 'Courses', root_path %></li>
-          <% if logged_in? %>
-            <li><%= link_to 'Students', students_path %></li>
-          <% end %>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
 
-  <% flash.each do |key, message| %>
-    <div class="container">
-      <div class="row sign-up-form">
-        <div class="col s12 m12 l12">
-          <div class="card-panel red lighten-2" id="fade-out-target">
-            <span class="white-text">
-                <%= message %>
-            </span>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end">
+
+          <%#= link_to 'Courses', root_path, { :class=>"navbar-item" } %>
+
+          <% unless current_page?(root_url) %>
+
+            <%= link_to 'Home', root_path, { :class=>"navbar-item" } %>
+          <% end %>
+
+          <%#= link_to 'Courses', courses_path, { :class=>"navbar-item" } %>
+
+
+          <div class="navbar-item has-dropdown is-hoverable">
+
+
+
+
+
+            <a class="navbar-link">
+              Account
+            </a>
+
+            <div class="navbar-dropdown">
+              <%= session_link %>
+
+              <a><%= link_to "Profile", student_path(current_user), { :class=>"navbar-item" }%></a>
+
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    </nav>
+  <!--  <ul id="dropdown1" class="dropdown-content">-->
+  <!--    <li><%#= session_link %></li>-->
+      <%# if logged_in? %>
+  <!--      <li><%#= link_to "Profile", student_path(current_user) %></li>-->
+      <%# end %>
+  <!--    <li class="divider"></li>-->
 
-</header>
+  <!--  </ul>-->
+  <!--  <ul id="dropdown2" class="dropdown-content">-->
+  <!--    <li><%#= session_link %></li>-->
+      <%# if logged_in? %>
+  <!--      <li><%#= link_to "Profile", student_path(current_user) %></li>-->
+      <%# end %>
+  <!--    <li class="divider"></li>-->
+
+  <!--  </ul>-->
+  <!--  <nav class ="navbar">-->
+  <!--    <div class="container">-->
+  <!--      <div class="nav-wrapper">-->
+          <%#= link_to 'Monsters University', root_path, class:"brand-logo right" %>
+  <!--        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+  <!--        <ul id="nav-mobile" class="left hide-on-med-and-down">-->
+  <!--          <li><%#= link_to 'Courses', root_path %></li>-->
+            <%# if logged_in? %>
+  <!--            <li><%#= link_to 'Students', students_path %></li>-->
+            <%# end %>
+  <!--          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>-->
+  <!--        </ul>-->
+  <!--        <ul class="sidenav" id="mobile-demo">-->
+  <!--          <li><%#= link_to 'Courses', root_path %></li>-->
+            <%# if logged_in? %>
+  <!--            <li><%#= link_to 'Students', students_path %></li>-->
+            <%# end %>
+  <!--          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>-->
+  <!--        </ul>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </nav>-->
+
+    <% flash.each do |key, message| %>
+      <div class="container">
+        <div class="row sign-up-form">
+          <div class="col s12 m12 l12">
+            <div class="card-panel red lighten-2" id="fade-out-target">
+              <span class="white-text">
+                  <%= message %>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </header>
+<% end %>
