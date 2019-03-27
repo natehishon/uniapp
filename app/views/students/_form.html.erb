@@ -1,48 +1,54 @@
+<% if !logged_in? %>
+  <div class="mu-logo-container">
+    <%= link_to image_tag("monsters-university-logo.png", :class => "mu-nav-logo"), root_path %>
+  </div>
+<% end %>
+
 <%= render 'shared/errors', obj: @student %>
-<div class="container">
-  <div class="row center sign-up-form">
-    <div class="col s12 m12 l12">
+<div class="log-in-container">
+
       <div class="card-panel">
-        <h3 class="header"><%=(@student.new_record? ? "Sign Up!" : "Edit") %></h3>
+        <h3 class="log-in-title"><%=(@student.new_record? ? "Sign Up" : "Edit") %></h3>
         <div class="row">
           <%= form_for(@student, html: {class: "col s12"}) do |f| %>
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.text_field :name, placeholder: "Enter your full name", autofocus: true %>
-                <%= f.label :name, class: "active" %>
+            <div class="field">
+              <%= f.label :name, class: "label" %>
+              <div class="control">
+                <%= f.email_field :name, class:"input", placeholder: "Enter your name", autofocus: true %>
               </div>
+
             </div>
 
 
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.email_field :email, placeholder: "Enter your email address" %>
-                <%= f.label :email, class: "active" %>
+            <div class="field">
+              <%= f.label :email, class: "label" %>
+              <div class="control">
+                <%= f.email_field :email, class:"input", placeholder: "Enter your email address", autofocus: true %>
               </div>
             </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.password_field :password, placeholder: "Choose a password" %>
-                <%= f.label :password, class: "active" %>
+            <div class="field">
+              <%= f.label :password, class: "label" %>
+              <div class="control">
+                <%= f.email_field :password, class:"input", placeholder: "Enter your password", autofocus: true %>
               </div>
+
             </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.password_field :password_confirmation, placeholder: "Confirm your password" %>
-                <%= f.label :password_confirmation, class: "active" %>
+            <div class="field">
+              <%= f.label :password_confirmation, class: "label" %>
+              <div class="control">
+                <%= f.email_field :password_confirmation, class:"input", placeholder: "Confirm password", autofocus: true %>
               </div>
+
+            </div>
+            <div class="log-in-button-container">
+                <%= f.button(@student.new_record? ? "Sign Up" : "Submit updates", class: "button is-info") %>
             </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <%= f.button(@student.new_record? ? "Sign Up" : "Submit updates", class: "btn orange waves-effect waves-light right") %>
-              </div>
-            </div>
           <% end %>
         </div>
-      </div>
+
     </div>
   </div>
 </div>

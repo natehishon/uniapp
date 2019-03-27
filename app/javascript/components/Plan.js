@@ -22,15 +22,15 @@ class Plan extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <th>Completed</th>
-                            <td className="course-width">Monst 221   Interpretive Dance</td>
+                            <th className="green-text">Completed</th>
+                            <td className="course-width">Monst-221    Interpretive Dance</td>
                             <td>3.00</td>
                             <td>2018FA</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <th>Completed</th>
-                            <td className="course-width">Monst 231   Monsters in Human Media</td>
+                            <th className="green-text">Completed</th>
+                            <td className="course-width">Monst-231    Monsters in Human Media</td>
                             <td>3.00</td>
                             <td>2018FA</td>
                             <td>3</td>
@@ -44,7 +44,7 @@ class Plan extends React.Component {
 
             <div className="track-container">
                 <h2 className="plan-class-title">Scaring: 12 Credits</h2>
-                <p className="plan-in-prog">Complete all of the following items. 2 of 4 Completed. </p>
+                <p className="plan-in-prog">Complete all of the following items. 1 of 4 Completed. </p>
 
                 <div className="plan-table-container">
                     <table className="table">
@@ -59,34 +59,34 @@ class Plan extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <th>Completed</th>
-                            <td className="course-width">Scare-314   Cognitive Neuroscience </td>
+                            <th className="green-text">Completed</th>
+                            <td className="course-width">Scare-314    Cognitive Neuroscience </td>
                             <td>3.00</td>
                             <td>2018FA</td>
                             <td>3</td>
                         </tr>
 
                         <tr>
-                            <th>Completed</th>
-                            <td className="course-width">Scare-102   Hiding Techniques</td>
-                            <td>3.00</td>
+                            <th className="yellow-text">In Progress</th>
+                            <td className="course-width">Risk Mngmt-202    Emergency Protocol</td>
+                            <td>-</td>
+                            <td>2019SP</td>
+                            <td>3</td>
+                        </tr>
+
+                        <tr>
+                            <th className="yellow-text">In Progress</th>
+                            <td className="course-width">Scaring-257    Tactical Thinking</td>
+                            <td>-</td>
+                            <td>2019SP</td>
+                            <td>3</td>
+                        </tr>
+
+                        <tr>
+                            <th className="red-text">Not Started</th>
+                            <td className="course-width">Scaring-102    Hiding Techniques</td>
+                            <td>-</td>
                             <td>2013FA</td>
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <th>In Progress</th>
-                            <td className="course-width">Risk Mngmt 202 - Emergency Protocol</td>
-                            <td>-</td>
-                            <td>2019SP</td>
-                            <td>3</td>
-                        </tr>
-
-                        <tr>
-                            <th>In Progress</th>
-                            <td className="course-width">Scaring 257   Tactical Thinking</td>
-                            <td>-</td>
-                            <td>2019SP</td>
                             <td>3</td>
                         </tr>
 
@@ -114,8 +114,8 @@ class Plan extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <th>Completed</th>
-                            <td className="course-width">Danc   Ballroom Dancing</td>
+                            <th className="green-text">Completed</th>
+                            <td className="course-width">Dance-156    Ballroom Dancing</td>
                             <td>3.00</td>
                             <td>2018FA</td>
                             <td>3</td>
